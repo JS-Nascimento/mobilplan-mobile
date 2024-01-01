@@ -17,6 +17,7 @@ class GoogleLoginButton extends StatelessWidget {
         textStyle: const TextStyle(
           fontFamily: 'Montserrat',
           fontSize: 20,
+          color: Colors.indigo,
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(4),
@@ -25,10 +26,10 @@ class GoogleLoginButton extends StatelessWidget {
       ),
       onPressed: onPressed,
       child: Row(
-        mainAxisSize: MainAxisSize.min, // Ajusta o Row para se ajustar ao seu conteúdo
+        mainAxisSize: MainAxisSize.min,
         children: [
           Image.asset('assets/images/google_logo.png', height: 28, width: 28), // Logo do Google
-          const SizedBox(width: 28), // Espaço entre a imagem e o texto
+          const SizedBox(width: 28), // Espaçamento entre a logo e o texto
           const Text('Login com Google'), // Texto do botão
         ],
       ),

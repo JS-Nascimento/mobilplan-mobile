@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobilplan_mobile/screens/login_screen/login.dart';
+import 'package:mobilplan_mobile/screens/register_screen/register.dart';
 import 'package:mobilplan_mobile/themes/theme_mobilplan.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: mobilPlanTheme,
-      home: Login(),
+      home: Register(),
     );
   }
 }
