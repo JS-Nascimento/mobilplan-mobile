@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mobilplan_mobile/screens/login_screen/login.dart';
 import 'package:mobilplan_mobile/screens/register_screen/register.dart';
 import 'package:mobilplan_mobile/themes/theme_mobilplan.dart';
 

@@ -8,7 +8,10 @@ import '../../components/buttons/forgot_password_button.dart';
 import '../../components/logo/logo_image.dart';
 
 class Login extends StatelessWidget {
-  const Login({super.key});
+  Login({super.key});
+
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +30,18 @@ class Login extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: EmailText(),
+                  child: EmailText(
+                    controller: _emailController,
+                  ),
                 ),
               ],
             ),
             const SizedBox(height: 50.0),
-            const Row(
+            Row(
               children: [
                 Expanded(
                   child: PasswordField(
+                    controller: _passwordController,
                     label: "Senha",
                     keyboardType: TextInputType.text,
                   ),

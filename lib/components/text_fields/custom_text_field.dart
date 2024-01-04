@@ -2,17 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:mobilplan_mobile/themes/theme_mobilplan.dart';
 
 class CustomText extends StatelessWidget {
-  CustomText({super.key, required this.label, required this.keyboardType});
+  const CustomText({super.key,
+    required this.label,
+    required this.keyboardType,
+    required this.controller,
+    this.validator,
+  });
 
   final String label;
   final TextInputType keyboardType;
-  final TextEditingController _emailController = TextEditingController();
+  final FormFieldValidator<String>? validator;
+  final TextEditingController controller ;
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      controller: _emailController,
+    return TextFormField(
+      controller: controller,
       keyboardType: keyboardType,
+      validator: validator,
       style: const TextStyle(fontSize: 20, height: 1.5),
       decoration: InputDecoration(
         labelText: label,

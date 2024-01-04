@@ -2,14 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:mobilplan_mobile/themes/theme_mobilplan.dart';
 
 class EmailText extends StatelessWidget {
-  EmailText({super.key});
+  const EmailText({super.key,
+  this.validator,
+  required this.controller,
+  });
 
-  final TextEditingController _emailController = TextEditingController();
+  final FormFieldValidator<String>? validator;
+  final TextEditingController controller;
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      controller: _emailController,
+    return TextFormField(
+      controller:controller,
+      validator: validator,
       keyboardType: TextInputType.emailAddress,
       style: const TextStyle(fontSize: 20, height: 1.5),
       decoration: InputDecoration(
